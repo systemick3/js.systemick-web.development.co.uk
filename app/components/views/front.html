@@ -1,0 +1,32 @@
+<div id="page" class="front" ng-controller="frontCtrl">
+  <div class="row">
+    <div class="col-md-3 front-panel left">
+      <h2 class="block-title block-title">Technologies</h2>
+      <ul class="homepage-tabs">
+        <li ng-repeat="item in skills" ng-click="selectSkill(item.slug)" class="tab"><a href="" ng-class="getSelectedSkillClass(item.slug)" ng-bind-html="item.title"></a></li>
+      </ul>
+    </div>
+    <div class="col-md-5 front-panel centre">
+      <div class="skill" ng-repeat="item in skills" ng-show="selectedSkill == item.slug">
+      <h2 class="block-title block-title">{{ item.title }}</h2>
+        <div class="description" ng-bind-html="item.Summary"></div>
+        <div class="readmore"><a href="#/{{ item.slug }}">Read more</a></div>
+      </div>
+    </div>
+    <div class="col-md-4 front-panel right last">
+      <div id="block-views-tweets-block" class="block tweets-block">
+        <h2 class="block-title block-title">Recent tweets</h2>
+        <div class="view view-tweets">
+          <div class="tweet" ng-repeat="item in tweets" ng-bind-html="item.oEmbed.html"></div>
+        </div>
+        <div class="twitter-follow">
+          <a href="https://twitter.com/systemick" class="twitter-follow-button" data-show-count="false">Follow @systemick</a>
+          <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

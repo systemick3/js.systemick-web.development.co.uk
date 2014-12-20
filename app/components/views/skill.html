@@ -1,0 +1,7 @@
+<div id="page" class="skill" ng-controller="skillCtrl">
+  <div class="skill" ng-repeat="skill in skills | skillFilter:'slug':currentSlug">
+    <h2>{{ skill.title }}</h2>
+    <div class="image"><img src="{{ skill.Image }}" /></div>
+    <div class="description" ng-bind-html="skill.Body"></div>
+  </div>
+</div>
