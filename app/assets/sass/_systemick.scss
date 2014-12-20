@@ -375,6 +375,17 @@ header {
 
         .view-tweets {
           margin-top: 5%;
+
+          .tweet {
+
+            blockquote {
+              padding-left: 6%;
+            }
+          }
+        }
+
+        .twitter-follow {
+          margin-left: 6%;
         }
       }
 

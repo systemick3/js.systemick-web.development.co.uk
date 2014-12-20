@@ -8521,40 +8521,48 @@ footer .power-copy {
     margin-top: 5%;
   }
   /* line 381, ../sass/_systemick.scss */
+  #page.front .front-panel.right .view-tweets .tweet blockquote {
+    padding-left: 6%;
+  }
+  /* line 387, ../sass/_systemick.scss */
+  #page.front .front-panel.right .twitter-follow {
+    margin-left: 6%;
+  }
+  /* line 392, ../sass/_systemick.scss */
   #page.front .front-panel.last {
     background-color: #f2f2f2;
   }
 
-  /* line 389, ../sass/_systemick.scss */
+  /* line 400, ../sass/_systemick.scss */
   footer {
     padding: 2% 0 2% 0;
     width: 100%;
   }
-  /* line 393, ../sass/_systemick.scss */
+  /* line 404, ../sass/_systemick.scss */
   footer .inner {
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 2%;
     width: 990px;
   }
-  /* line 399, ../sass/_systemick.scss */
+  /* line 410, ../sass/_systemick.scss */
   footer .inner .powered {
     float: left;
   }
-  /* line 403, ../sass/_systemick.scss */
+  /* line 414, ../sass/_systemick.scss */
   footer .inner .copy {
     float: right;
   }
-  /* line 407, ../sass/_systemick.scss */
+  /* line 418, ../sass/_systemick.scss */
   footer .inner .tweets-block {
     float: none;
   }
-  /* line 410, ../sass/_systemick.scss */
+  /* line 421, ../sass/_systemick.scss */
   footer .inner .tweets-block h2 {
     color: white;
   }
 
-  /* line 419, ../sass/_systemick.scss */
+  /* line 430, ../sass/_systemick.scss */
   .about,
   .contact,
   .skill {
@@ -8562,16 +8570,16 @@ footer .power-copy {
   }
 }
 @media all and (min-width: 480px) and (max-width: 959px) {
-  /* line 427, ../sass/_systemick.scss */
+  /* line 438, ../sass/_systemick.scss */
   header {
     min-height: 530px;
   }
-  /* line 430, ../sass/_systemick.scss */
+  /* line 441, ../sass/_systemick.scss */
   header .site-info {
     margin-left: 1%;
     width: 100%;
   }
-  /* line 436, ../sass/_systemick.scss */
+  /* line 447, ../sass/_systemick.scss */
   header .nav-tablet,
   header .nav-mobile {
     background-color: white;
@@ -8582,48 +8590,48 @@ footer .power-copy {
     padding-left: 0;
     width: 100%;
   }
-  /* line 445, ../sass/_systemick.scss */
+  /* line 456, ../sass/_systemick.scss */
   header .nav-tablet ul,
   header .nav-mobile ul {
     margin-left: 0;
   }
-  /* line 450, ../sass/_systemick.scss */
+  /* line 461, ../sass/_systemick.scss */
   header .nav-tablet ul li a,
   header .nav-mobile ul li a {
     color: #333333;
   }
-  /* line 453, ../sass/_systemick.scss */
+  /* line 464, ../sass/_systemick.scss */
   header .nav-tablet ul li a.active,
   header .nav-mobile ul li a.active {
     color: #80bd01;
   }
-  /* line 462, ../sass/_systemick.scss */
+  /* line 473, ../sass/_systemick.scss */
   header .welcome {
     float: left;
     margin-left: 1%;
     width: 97%;
   }
 
-  /* line 471, ../sass/_systemick.scss */
+  /* line 482, ../sass/_systemick.scss */
   #page h2 {
     margin-top: 0;
   }
-  /* line 477, ../sass/_systemick.scss */
+  /* line 488, ../sass/_systemick.scss */
   #page.front .row {
     background-color: white;
     width: 100%;
   }
-  /* line 481, ../sass/_systemick.scss */
+  /* line 492, ../sass/_systemick.scss */
   #page.front .row .front-panel {
     background-color: white;
     width: 100%;
   }
-  /* line 487, ../sass/_systemick.scss */
+  /* line 498, ../sass/_systemick.scss */
   #page.front .row .front-panel.left ul {
     margin-left: 0;
     margin-top: 2%;
   }
-  /* line 491, ../sass/_systemick.scss */
+  /* line 502, ../sass/_systemick.scss */
   #page.front .row .front-panel.left ul li {
     background-color: #606161;
     margin-bottom: 0.5%;
@@ -8631,56 +8639,56 @@ footer .power-copy {
     padding: 0.5% 0 0.5% 2%;
     width: 100%;
   }
-  /* line 498, ../sass/_systemick.scss */
+  /* line 509, ../sass/_systemick.scss */
   #page.front .row .front-panel.left ul li a {
     color: white;
     text-transform: uppercase;
   }
-  /* line 502, ../sass/_systemick.scss */
+  /* line 513, ../sass/_systemick.scss */
   #page.front .row .front-panel.left ul li a.active {
     color: #80bd01;
   }
-  /* line 514, ../sass/_systemick.scss */
+  /* line 525, ../sass/_systemick.scss */
   #page.front .row .front-panel.centre {
     margin-bottom: 0;
   }
-  /* line 517, ../sass/_systemick.scss */
+  /* line 528, ../sass/_systemick.scss */
   #page.front .row .front-panel.centre .skill {
     margin: 2% 0 0 0;
     width: 100%;
   }
-  /* line 521, ../sass/_systemick.scss */
+  /* line 532, ../sass/_systemick.scss */
   #page.front .row .front-panel.centre .skill h2 {
     margin-left: 2%;
   }
-  /* line 525, ../sass/_systemick.scss */
+  /* line 536, ../sass/_systemick.scss */
   #page.front .row .front-panel.centre .skill .description {
     margin: 2% 4% 0 2%;
     width: 100%;
   }
-  /* line 530, ../sass/_systemick.scss */
+  /* line 541, ../sass/_systemick.scss */
   #page.front .row .front-panel.centre .skill .readmore {
     margin-left: 2%;
   }
-  /* line 538, ../sass/_systemick.scss */
+  /* line 549, ../sass/_systemick.scss */
   #page.front .row .front-panel.right {
     background-color: #f2f2f2;
     padding-top: 2%;
   }
-  /* line 542, ../sass/_systemick.scss */
+  /* line 553, ../sass/_systemick.scss */
   #page.front .row .front-panel.right h2 {
     margin: 0 0 0 2%;
   }
-  /* line 546, ../sass/_systemick.scss */
+  /* line 557, ../sass/_systemick.scss */
   #page.front .row .front-panel.right .view-tweets {
     margin-top: 0;
   }
-  /* line 549, ../sass/_systemick.scss */
+  /* line 560, ../sass/_systemick.scss */
   #page.front .row .front-panel.right .view-tweets .tweet {
     border-bottom: dotted 1px #606161;
     padding-top: 1%;
   }
-  /* line 566, ../sass/_systemick.scss */
+  /* line 577, ../sass/_systemick.scss */
   #page.about, #page.contact, #page.skill {
     padding: 0 1% 0 2%;
   }
