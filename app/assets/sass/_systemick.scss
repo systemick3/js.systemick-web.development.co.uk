@@ -45,6 +45,10 @@ textarea.form-control {
   font-size: 80%;
 }
 
+iframe {
+  border: none;
+}
+
 button.btn-primary {
   background-color: $green;
   border-color: $green;
@@ -183,7 +187,7 @@ header {
         }
 
         .twitter-follow {
-          margin-left: 2%;
+          margin-left: 4%;
         }
       }
     }
