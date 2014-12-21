@@ -76,7 +76,6 @@ angular.module("systemick")
     };
     
     skillsFactory.getSkills().then(function(data) {
-      console.log('frontCtrl');
       $scope.skills = data.data;
     });
 
