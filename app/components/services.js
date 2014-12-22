@@ -4,7 +4,7 @@ angular.module("systemick")
   .factory("tweetsFactory", ['$http', 'systemickConfig', function($http, systemickConfig) {
     var tweetsData = {};
     var apiData = systemickConfig.apiData;
-    var tweetsUrl = apiData.server + ':' + apiData.port + '/twitter/user/systemick/2';
+    var tweetsUrl = apiData.server + '/twitter/user/systemick/2';
 
     tweetsData.getTweets = function () {
         return $http.get(tweetsUrl);
@@ -17,7 +17,7 @@ angular.module("systemick")
   .factory("frontFactory", ['$http', 'systemickConfig', function($http, systemickConfig) {
     var frontData = {};
     var apiData = systemickConfig.apiData;
-    var frontUrl = apiData.server + ':' + apiData.port + '/systemick/collection/front';
+    var frontUrl = apiData.server + '/systemick/collection/front';
 
     frontData.getFront = function () {
       return $http.get(frontUrl);
@@ -30,7 +30,7 @@ angular.module("systemick")
   .factory("aboutFactory", ['$http', 'systemickConfig', function($http, systemickConfig) {
     var aboutData = {};
     var apiData = systemickConfig.apiData;
-    var aboutUrl = apiData.server + ':' + apiData.port + '/systemick/collection/pages';
+    var aboutUrl = apiData.server + '/systemick/collection/pages';
 
     aboutData.getAbout = function () {
       return $http.get(aboutUrl);
@@ -42,7 +42,7 @@ angular.module("systemick")
   .factory("skillsFactory", ['$http', 'systemickConfig', function($http, systemickConfig) {
   var promise;
   var apiData = systemickConfig.apiData;
-  var skillsUrl = apiData.server + ':' + apiData.port + '/systemick/collection/skills';
+  var skillsUrl = apiData.server + '/systemick/collection/skills';
   var skillsData = {
     getSkills: function() {
       if ( !promise ) {
