@@ -1,5 +1,5 @@
 angular.module("systemick")
-  .controller('containerCtrl', function($scope, $http, $location, $log, tweetsFactory, frontFactory, aboutFactory) {
+  .controller('containerCtrl', function($scope, $http, $location, $log, $window, tweetsFactory, frontFactory, aboutFactory) {
 
     $scope.currentYear = new Date().getFullYear();
     $scope.getMenuClass = function(path) {
@@ -32,6 +32,10 @@ angular.module("systemick")
         $scope.status = 'Unable to load tweets: ' + error.message;
       });
 
+    $scope.$on('$viewContentLoaded', function(event) {
+      $window.ga('send', 'pageview', { page: $location.path() });
+    });
+
   })
 
   // Contact page controller
@@ -41,7 +45,7 @@ angular.module("systemick")
   .config(function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
   })
-  .controller('contactCtrl', function($scope, $http, systemickConfig) {
+  .controller('contactCtrl', function($scope, $window, $location, $http, systemickConfig) {
     var apiData = systemickConfig.apiData;
     var contactUrl = apiData.server + '/systemick/contact'
     
@@ -62,10 +66,15 @@ angular.module("systemick")
         });
       }
     };
+
+    $scope.$on('$viewContentLoaded', function(event) {
+      $window.ga('send', 'pageview', { page: $location.path() });
+    });
+
   })
 
   // Front page controller
-  .controller('frontCtrl', function($scope, $http,  skillsFactory) {
+  .controller('frontCtrl', function($scope, $window, $location, $http,  skillsFactory) {
     $scope.selectedSkill = 'nodejs';
     $scope.selectSkill = function(newSkill) {
       $scope.selectedSkill = newSkill;
@@ -79,16 +88,24 @@ angular.module("systemick")
       $scope.skills = data.data;
     });
 
+    $scope.$on('$viewContentLoaded', function(event) {
+      $window.ga('send', 'pageview', { page: $location.path() });
+    });
+
   })
 
   // Skill page controller
-  .controller('skillCtrl', function($scope, $location, skillsFactory) {
+  .controller('skillCtrl', function($scope, $window, $location, skillsFactory) {
 
     //$scope.path = $location.path();
     $scope.currentSlug = $location.path().substr(1);
 
     skillsFactory.getSkills().then(function(data)  {
       $scope.skills = data.data;
+    });
+
+    $scope.$on('$viewContentLoaded', function(event) {
+      $window.ga('send', 'pageview', { page: $location.path() });
     });
 
   });
