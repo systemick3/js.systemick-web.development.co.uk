@@ -43,7 +43,7 @@ angular.module("systemick")
   })
   .controller('contactCtrl', function($scope, $http, systemickConfig) {
     var apiData = systemickConfig.apiData;
-    var contactUrl = apiData.server + ':' + apiData.port + '/systemick/contact'
+    var contactUrl = apiData.server + '/systemick/contact'
     
     $scope.formSuccess = false;
     $scope.sendContactEmail = function(contactDetails) {
