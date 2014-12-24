@@ -1,6 +1,7 @@
 <div id="page" class="contact" ng-controller="contactCtrl">
 	<h2>Contact</h2>
   <div class="success" ng-show="formSuccess">You have successfully submitted your details and we will reply to your request shortly</div>
+  <div class="error" ng-show="formSubmitError">Unable to send email. Please try again later.</div>
 	<div class="form" ng-hide="formSuccess">
 		<form name="contactForm" method="post" novalidate ng-submit="sendContactEmail(contactDetails)">
 		  <div class="well">

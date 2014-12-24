@@ -45,7 +45,7 @@ angular.module("systemick")
   var skillsUrl = apiData.server + '/systemick/collection/skills';
   var skillsData = {
     getSkills: function() {
-      if ( !promise ) {
+      if (!promise) {
         // $http returns a promise, which has a then function, which also returns a promise
         promise = $http.get(skillsUrl).then(function (response) {
           // The then function here is an opportunity to modify the response
@@ -58,4 +58,16 @@ angular.module("systemick")
     }
   };
   return skillsData;
-}]);
+}])
+
+  .factory("contactFactory", ['$http', 'systemickConfig', function($http, systemickConfig) {
+    var contactObject = {};
+    var apiData = systemickConfig.apiData;
+    var contactUrl = apiData.server + '/systemick/collection/skills';
+
+    contactObject.sendContactData = function (contactData) {
+      return $http.post(contactUrl, contactData);
+    };
+
+    return contactObject;
+  }]);

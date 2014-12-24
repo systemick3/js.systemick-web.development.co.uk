@@ -45,24 +45,34 @@ angular.module("systemick")
   .config(function($httpProvider) {
     $httpProvider.defaults.useXDomain = true;
   })
-  .controller('contactCtrl', function($scope, $window, $location, $http, systemickConfig) {
-    var apiData = systemickConfig.apiData;
-    var contactUrl = apiData.server + '/systemick/contact'
+  .controller('contactCtrl', function($scope, $window, $location, $http, contactFactory, systemickConfig) {
+    //var apiData = systemickConfig.apiData;
+    //var contactUrl = apiData.server + '/systemick/contact'
     
     $scope.formSuccess = false;
+    $scope.forSubmitError = false;
     $scope.sendContactEmail = function(contactDetails) {
       if (angular.isDefined(contactDetails.name) && angular.isDefined(contactDetails.email) && angular.isDefined(contactDetails.subject) 
         && angular.isDefined(contactDetails.message)) {
-        $http({
-            method: "post",
-            url: contactUrl,
-            data: contactDetails
-        })
-        .success(function (data) {
+
+        // $http({
+        //     method: "post",
+        //     url: contactUrl,
+        //     data: contactDetails
+        // })
+        // .success(function (data) {
+        //   $scope.formSuccess = true;
+        // })
+        // .error(function (error) {
+        //   $scope.status = 'Unable to send email';
+        // });
+
+        contactFactory.sendContactData(contactDetails)
+        .success(function(data) {
           $scope.formSuccess = true;
         })
-        .error(function (error) {
-          $scope.status = 'Unable to send email';
+        .error(function(error) {
+          $scope.formSubmitError = true;
         });
       }
     };
