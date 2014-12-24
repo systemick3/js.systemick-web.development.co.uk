@@ -63,7 +63,7 @@ angular.module("systemick")
   .factory("contactFactory", ['$http', 'systemickConfig', function($http, systemickConfig) {
     var contactObject = {};
     var apiData = systemickConfig.apiData;
-    var contactUrl = apiData.server + '/systemick/collection/skills';
+    var contactUrl = apiData.server + '/systemick/contact';
 
     contactObject.sendContactData = function (contactData) {
       return $http.post(contactUrl, contactData);
