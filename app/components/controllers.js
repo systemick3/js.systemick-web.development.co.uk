@@ -55,18 +55,6 @@ angular.module("systemick")
       if (angular.isDefined(contactDetails.name) && angular.isDefined(contactDetails.email) && angular.isDefined(contactDetails.subject) 
         && angular.isDefined(contactDetails.message)) {
 
-        // $http({
-        //     method: "post",
-        //     url: contactUrl,
-        //     data: contactDetails
-        // })
-        // .success(function (data) {
-        //   $scope.formSuccess = true;
-        // })
-        // .error(function (error) {
-        //   $scope.status = 'Unable to send email';
-        // });
-
         contactFactory.sendContactData(contactDetails)
         .success(function(data) {
           $scope.formSuccess = true;
