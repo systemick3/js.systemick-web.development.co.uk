@@ -53,6 +53,7 @@ angular.module("systemick")
     $scope.forSubmitError = false;
     $scope.origin = location.hostname;
     $scope.sendContactEmail = function(contactDetails) {
+      contactDetails.origin = location.hostname;
       if (angular.isDefined(contactDetails.name) && angular.isDefined(contactDetails.email) && angular.isDefined(contactDetails.subject) 
         && angular.isDefined(contactDetails.message)) {
 
