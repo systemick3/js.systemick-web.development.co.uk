@@ -7,7 +7,7 @@ angular.module("systemick")
     var tweetsUrl = apiData.server + '/twitter/user/systemick/2';
 
     tweetsData.getTweets = function () {
-        return $http.get(tweetsUrl);
+      return $http.get(tweetsUrl);
     };
 
     return tweetsData;

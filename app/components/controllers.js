@@ -51,6 +51,7 @@ angular.module("systemick")
     
     $scope.formSuccess = false;
     $scope.forSubmitError = false;
+    $scope.origin = location.hostname;
     $scope.sendContactEmail = function(contactDetails) {
       if (angular.isDefined(contactDetails.name) && angular.isDefined(contactDetails.email) && angular.isDefined(contactDetails.subject) 
         && angular.isDefined(contactDetails.message)) {
